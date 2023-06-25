@@ -1,0 +1,120 @@
+/* Reset */
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --extra-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, .75);
+    --light-gray: hsl(0, 0%, 95%);
+    --body-font: 15px;
+    --lexend: 'Lexend Deca', sans-serif;
+    --bsd: 'Big Shoulders Display', cursive;
+}
+
+/* General Styles */
+body {
+    font-family: var(--lexend);
+    font-size: var(--body-font);
+
+    /* Responsive Mobile Widths */
+    width: clamp(280px, 100%, 425px);
+}
+
+main {
+    
+
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    padding: 48px;
+}
+
+h1 {
+    font-family: var(--bsd);
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 25px;
+    color: var(--light-gray);
+}
+
+p {
+    line-height: 25px;
+    margin-bottom: 25px;
+    color: var(--transparent-white);
+}
+
+img {
+    width: 64px;
+    height: 40px;
+    margin-bottom: 35px;
+}
+
+button {
+    background-color: var(--light-gray);
+    border: 1px solid transparent;
+    border-radius: 24px;
+    padding: 12px 32px;
+    cursor: pointer;
+}
+
+/* Utility Classes */
+.bright-orange-bg {
+    background-color: var(--bright-orange);
+}
+
+.dark-cyan-bg {
+    background-color: var(--dark-cyan);
+}
+
+.extra-dark-cyan-bg {
+    background-color: var(--extra-dark-cyan);
+}
+
+.bright-orange-text {
+    color: var(--bright-orange);
+}
+
+.dark-cyan-text {
+    color: var(--dark-cyan);
+}
+
+.extra-dark-cyan-text {
+    color: var(--extra-dark-cyan);
+}
+
+/* Hover Effects */
+button:hover {
+    border: 1px solid var(--light-gray);
+    color: var(--light-gray)
+}
+
+#sedan:hover {
+    background-color: var(--bright-orange);
+}
+
+#suv:hover {
+    background-color: var(--dark-cyan);
+}
+
+#luxury:hover {
+    background-color: var(--extra-dark-cyan);
+}
+
+@media (width >= 1440px) {
+    body {
+        width: 100%;
+    }
+
+    main {
+        flex-direction: row;
+    }
+}
